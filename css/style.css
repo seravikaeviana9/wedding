@@ -1,0 +1,730 @@
+/* ===============================
+   GOOGLE FONTS
+================================== */
+
+:root{
+
+    --primary:#C8A96A;
+    --secondary:#F8F5F0;
+    --white:#ffffff;
+    --dark:#2D2D2D;
+    --text:#666666;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--secondary);
+    color:var(--dark);
+    overflow-x:hidden;
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+section{
+
+    padding:90px 10%;
+
+}
+
+h1,h2,h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+h2{
+
+    text-align:center;
+    font-size:52px;
+    margin-bottom:60px;
+    color:var(--primary);
+
+}
+
+/* ===============================
+NAVBAR
+================================== */
+
+nav{
+
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+    font-size:30px;
+    color:var(--primary);
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:25px;
+
+}
+
+nav ul a{
+
+    color:var(--dark);
+    transition:.3s;
+
+}
+
+nav ul a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ===============================
+HERO
+================================== */
+
+.hero{
+
+    height:100vh;
+
+    background:url("../assets/photos/hero.jpg") center center/cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+
+    padding:20px;
+
+}
+
+.overlay h3{
+
+    font-size:32px;
+    letter-spacing:2px;
+
+}
+
+.overlay h1{
+
+    font-size:74px;
+    margin:25px 0;
+
+}
+
+.overlay p{
+
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+/* ===============================
+BUTTON
+================================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===============================
+COUPLE
+================================== */
+
+.couple-wrapper{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    background:white;
+
+    width:320px;
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card img{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+}
+
+.card h3{
+
+    margin-top:20px;
+    font-size:38px;
+
+}
+
+.card p{
+
+    color:var(--text);
+
+}
+
+/* ===============================
+COUNTDOWN
+================================== */
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.countdown div{
+
+    width:160px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.countdown span{
+
+    font-size:52px;
+    color:var(--primary);
+    font-weight:bold;
+
+}
+
+.countdown small{
+
+    display:block;
+    margin-top:10px;
+    color:var(--text);
+
+}
+
+/* ===============================
+TIMELINE
+================================== */
+
+.timeline{
+
+    max-width:900px;
+    margin:auto;
+
+}
+
+.timeline-item{
+
+    background:white;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.timeline-item h3{
+
+    font-size:34px;
+    margin-bottom:10px;
+
+}
+
+/* ===============================
+GALLERY
+================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+.gallery a{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.gallery img{
+
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ===============================
+EVENT
+================================== */
+
+.event-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.event-card p{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+}
+
+/* ===============================
+FORM
+================================== */
+
+form{
+
+    max-width:650px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+input,
+textarea,
+select{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+textarea{
+
+    resize:none;
+
+    min-height:170px;
+
+}
+
+button{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===============================
+WISHES
+================================== */
+
+#wishList{
+
+    margin-top:40px;
+
+    max-width:700px;
+
+    margin-inline:auto;
+
+}
+
+.wish{
+
+    background:white;
+
+    margin-bottom:20px;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.wish h4{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+/* ===============================
+GIFT
+================================== */
+
+#gift{
+
+    text-align:center;
+
+}
+
+#gift img{
+
+    width:240px;
+
+    margin:35px auto;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===============================
+FOOTER
+================================== */
+
+footer{
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+footer h3{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+/* ===============================
+MUSIC BUTTON
+================================== */
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    font-size:26px;
+
+    z-index:999;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===============================
+RESPONSIVE
+================================== */
+
+@media(max-width:992px){
+
+    nav{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+    .overlay h1{
+
+        font-size:56px;
+
+    }
+
+    h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+
+        padding:70px 25px;
+
+    }
+
+    .overlay h1{
+
+        font-size:42px;
+
+    }
+
+    .overlay h3{
+
+        font-size:24px;
+
+    }
+
+    .overlay p{
+
+        font-size:18px;
+
+    }
+
+    .countdown div{
+
+        width:130px;
+
+    }
+
+    .countdown span{
+
+        font-size:40px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+    }
+
+    .card img{
+
+        width:180px;
+        height:180px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    nav{
+
+        padding:15px;
+
+    }
+
+    nav ul{
+
+        gap:12px;
+        font-size:14px;
+
+    }
+
+    .overlay h1{
+
+        font-size:34px;
+
+    }
+
+    .btn{
+
+        padding:14px 28px;
+
+    }
+
+    h2{
+
+        font-size:34px;
+
+    }
+
+}
