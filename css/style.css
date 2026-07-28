@@ -847,11 +847,179 @@ button {
 }
 
 
+/* ===============================
+   MUSIC BUTTON
+================================ */
+
+
+#musicBtn {
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    font-size:25px;
+
+    z-index:9999;
+
+    box-shadow:var(--shadow);
+
+}
 
 
 
 /* ===============================
-   MOBILE
+   LUXURY FOOTER
+================================ */
+
+
+#footer {
+
+    min-height:500px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fffaf2,
+        #f3e4c8
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+
+
+.footer-center {
+
+    max-width:900px;
+
+}
+
+
+
+.footer-top {
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#b08a4a;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.footer-center h1 {
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:85px;
+
+    font-weight:500;
+
+    color:#3b3025;
+
+    line-height:1.1;
+
+}
+
+
+
+.footer-symbol {
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin:15px 0;
+
+}
+
+
+
+.footer-date {
+
+    margin-top:45px;
+
+    font-size:16px;
+
+    letter-spacing:5px;
+
+    color:#b08a4a;
+
+}
+
+
+
+.footer-message {
+
+    margin-top:35px;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:28px;
+
+    font-style:italic;
+
+    color:#6b5845;
+
+}
+
+
+
+.footer-bottom-line {
+
+    width:120px;
+
+    height:1px;
+
+    background:var(--primary);
+
+    margin:40px auto;
+
+}
+
+
+
+.footer-made {
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:#8a7355;
+
+}
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE
 ================================ */
 
 
@@ -865,7 +1033,6 @@ button {
         gap:15px;
 
     }
-
 
 
     nav ul {
@@ -926,286 +1093,41 @@ button {
 
     }
 
-/* ===============================
-   FOOTER
-================================ */
-
-/* =================================
-   LUXURY FOOTER WITHOUT IMAGE
-================================= */
 
 
-    #footer {
-    
-        min-height:600px;
-    
-        display:flex;
-    
-        align-items:center;
-    
-        justify-content:center;
-    
-        text-align:center;
-    
-    
-        color:#3b3025;
-    
-    
-        background:
-    
-        linear-gradient(
-            135deg,
-            #fffaf2,
-            #f3e4c8
-        );
-    
-    
-        position:relative;
-    
-        overflow:hidden;
-    
+    .gift-container {
+
+        flex-direction:column;
+
+        padding:0 20px;
+
     }
-    
-    
-    
-    /* soft gold circle decoration */
-    
-    #footer::before {
-    
-    
-        content:"";
-    
-        position:absolute;
-    
-        width:350px;
-    
-        height:350px;
-    
-        background:
-    
-        radial-gradient(
-            circle,
-            rgba(212,175,103,.25),
-            transparent 70%
-        );
-    
-    
-        top:-120px;
-    
-        left:-120px;
-    
-    
+
+
+
+    .bank-card h3 {
+
+        font-size:30px;
+
     }
-    
-    
-    
-    #footer::after {
-    
-    
-        content:"";
-    
-        position:absolute;
-    
-        width:350px;
-    
-        height:350px;
-    
-        background:
-    
-        radial-gradient(
-            circle,
-            rgba(212,175,103,.20),
-            transparent 70%
-        );
-    
-    
-        bottom:-120px;
-    
-        right:-120px;
-    
-    
+
+
+
+    .footer-center h1 {
+
+        font-size:55px;
+
     }
-    
-    
-    
-    .luxury-footer {
-    
-        position:relative;
-    
-        z-index:2;
-    
-        padding:50px 20px;
-    
+
+
+
+    .footer-message {
+
+        font-size:22px;
+
     }
-    
-    
-    
-    
-    .footer-small {
-    
-    
-        font-family:'Poppins', sans-serif;
-    
-        font-size:13px;
-    
-        letter-spacing:5px;
-    
-        text-transform:uppercase;
-    
-        color:#a8874a;
-    
-        margin-bottom:40px;
-    
-    
-    }
-    
-    
-    
-    
-    
-    .footer-name {
-    
-    
-        font-family:'Cormorant Garamond', serif;
-    
-    
-        font-size:85px;
-    
-    
-        font-weight:500;
-    
-    
-        line-height:1.1;
-    
-    
-        color:#4b3a2a;
-    
-    
-    }
-    
-    
-    
-    
-    .footer-divider {
-    
-    
-        color:#c8a96a;
-    
-    
-        font-size:35px;
-    
-    
-        margin:20px 0;
-    
-    
-    }
-    
-    
-    
-    
-    .footer-date {
-    
-    
-        margin-top:50px;
-    
-    
-        font-size:18px;
-    
-    
-        letter-spacing:6px;
-    
-    
-        color:#a8874a;
-    
-    
-    }
-    
-    
-    
-    
-    
-    .footer-quote {
-    
-    
-        margin-top:40px;
-    
-    
-        font-family:'Cormorant Garamond', serif;
-    
-    
-        font-size:28px;
-    
-    
-        font-style:italic;
-    
-    
-        color:#6d5840;
-    
-    
-    }
-    
-    
-    
-    
-    
-    .footer-line {
-    
-    
-        width:120px;
-    
-    
-        height:1px;
-    
-    
-        background:#c8a96a;
-    
-    
-        margin:45px auto;
-    
-    
-    }
-    
-    
-    
-    
-    
-    .footer-made {
-    
-    
-        font-size:13px;
-    
-    
-        letter-spacing:3px;
-    
-    
-        color:#8b7355;
-    
-    
-    }
-    
-    
-    
-    
-    @media(max-width:768px){
-    
-    
-        .footer-name {
-    
-            font-size:50px;
-    
-        }
-    
-    
-        .footer-quote {
-    
-            font-size:22px;
-    
-        }
 
 
 }
 
-}
 
-
-}
