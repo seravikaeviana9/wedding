@@ -926,5 +926,140 @@ button {
 
     }
 
+    /* ===============================
+   FOOTER
+================================ */
+
+#footer{
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    ),
+    url("../assets/photos/footer.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+}
+
+
+.footer-content h2{
+
+    font-size:65px;
+
+    color:#d6b36a;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-content > p{
+
+    font-size:18px;
+
+    color:#eee;
+
+}
+
+
+
+.footer-names{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin:40px 0;
+
+}
+
+
+
+.footer-names h3{
+
+    font-size:45px;
+
+    color:white;
+
+}
+
+
+
+.footer-names span{
+
+    font-size:40px;
+
+    color:#d6b36a;
+
+}
+
+
+
+.footer-date{
+
+    margin-top:20px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.copyright{
+
+    margin-top:50px;
+
+    font-size:14px;
+
+    opacity:.8;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+    .footer-content h2{
+
+        font-size:45px;
+
+    }
+
+
+    .footer-names{
+
+        flex-direction:column;
+
+        gap:5px;
+
+    }
+
+
+    .footer-names h3{
+
+        font-size:35px;
+
+    }
+
+
+}
+
 
 }
