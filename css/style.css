@@ -881,16 +881,89 @@ button {
 ================================ */
 
 
+/* ===============================
+   SIMPLE LUXURY FOOTER
+================================ */
+
+
 #footer {
 
-    min-height:500px;
 
-    background:
-    linear-gradient(
-        135deg,
-        #fffaf2,
-        #f3e4c8
-    );
+    background:#8b6a3e;
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px 35px;
+
+
+}
+
+
+
+.footer-content {
+
+
+    max-width:600px;
+
+    margin:auto;
+
+
+}
+
+
+
+.footer-content h3 {
+
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.footer-content p {
+
+
+    font-size:14px;
+
+    color:#f5ead8;
+
+    line-height:1.8;
+
+
+}
+
+
+
+.footer-brand {
+
+
+    font-size:15px !important;
+
+    letter-spacing:2px;
+
+    color:white !important;
+
+    margin-top:5px;
+
+
+}
+
+
+
+.back-top {
+
 
     display:flex;
 
@@ -898,124 +971,39 @@ button {
 
     align-items:center;
 
-    text-align:center;
 
-    padding:90px 20px;
+    width:35px;
+
+    height:35px;
+
+
+    margin:25px auto 0;
+
+
+    border-radius:50%;
+
+
+    color:#8b6a3e;
+
+    background:#e5c58b;
+
+
+    font-size:20px;
+
+    transition:.3s;
+
 
 }
 
 
 
-.footer-center {
+.back-top:hover {
 
-    max-width:900px;
+
+    transform:translateY(-5px);
+
 
 }
-
-
-
-.footer-top {
-
-    font-family:'Poppins', sans-serif;
-
-    font-size:14px;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    color:#b08a4a;
-
-    margin-bottom:40px;
-
-}
-
-
-
-.footer-center h1 {
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:85px;
-
-    font-weight:500;
-
-    color:#3b3025;
-
-    line-height:1.1;
-
-}
-
-
-
-.footer-symbol {
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:55px;
-
-    color:var(--primary);
-
-    margin:15px 0;
-
-}
-
-
-
-.footer-date {
-
-    margin-top:45px;
-
-    font-size:16px;
-
-    letter-spacing:5px;
-
-    color:#b08a4a;
-
-}
-
-
-
-.footer-message {
-
-    margin-top:35px;
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:28px;
-
-    font-style:italic;
-
-    color:#6b5845;
-
-}
-
-
-
-.footer-bottom-line {
-
-    width:120px;
-
-    height:1px;
-
-    background:var(--primary);
-
-    margin:40px auto;
-
-}
-
-
-
-.footer-made {
-
-    font-size:13px;
-
-    letter-spacing:3px;
-
-    color:#8a7355;
-
-}
-
 
 
 /* ===============================
