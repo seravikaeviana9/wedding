@@ -5,7 +5,7 @@
 
 // Google Apps Script Web App URL
 const SCRIPT_URL = 
-"https://script.google.com/macros/s/AKfycbx5KFjgPjR2mEkSkaxZmCUmBUIzUQ__sqUlf4QfzymEedPMZobJHN78bPLMoqWXOOV1gQ/exec";
+"https://script.google.com/macros/s/AKfycby6a0T0-nzqoR9309vAs3Sv21Ay4okGtJ_CWzzuJQUeUP1RMdSK6bgOhPeGs3hsxu6gQw/exec";
 
 
 
