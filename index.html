@@ -1,397 +1,663 @@
-/* ==========================================
-   GOOGLE SHEETS CONFIGURATION
-========================================== */
+<!DOCTYPE html>
+<html lang="en">
 
 
-// Google Apps Script Web App URL
-const SCRIPT_URL = 
-"https://script.google.com/macros/s/AKfycbw38rOBxXmvJQqnNXUGgTwaDxXo8kGsuMeQ0CWSc9acpGWIwKVGV9TDB6DPvsb8hRrF6g/exec";
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-/* ==========================================
-   RSVP SUBMIT
-========================================== */
+<title>Hafiz & Sera | Wedding Invitation</title>
 
+<meta name="description" content="Wedding Invitation of Hafiz Ilham and Sera Vika Eviana">
 
-const rsvpForm = document.getElementById("rsvpForm");
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-if (rsvpForm) {
 
 
-    rsvpForm.addEventListener(
-        "submit",
-        async function(e){
+<!-- Animation -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 
-        e.preventDefault();
 
+<!-- Lightbox -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 
-        const button = 
-        rsvpForm.querySelector("button");
 
 
-        button.disabled = true;
 
-        button.innerText = "Sending...";
 
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/style.css">
 
 
-        const data = {
 
+</head>
 
-            action:"rsvp",
 
-            nama:
-            rsvpForm.nama.value,
 
 
-            attendance:
-            rsvpForm.attendance.value,
+<body>
 
 
-            guest:
-            rsvpForm.guest.value
 
+<!-- ================= NAVIGATION ================= -->
 
-        };
 
+<nav>
 
+<div class="logo">
+H & S
+</div>
 
-        try {
 
+<ul>
 
-            const response = await fetch(
-                SCRIPT_URL,
-                {
+<li><a href="#home">Home</a></li>
+<li><a href="#couple">Couple</a></li>
+<li><a href="#story">Story</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#event">Event</a></li>
+<li><a href="#rsvp">RSVP</a></li>
+<li><a href="#wishes">Wishes</a></li>
+<li><a href="#gift">Gift</a></li>
 
-                    method:"POST",
+</ul>
 
-                    body:
-                    new URLSearchParams(data)
+</nav>
 
-                }
-            );
 
 
 
-            const result =
-            await response.json();
 
 
+<!-- ================= HERO ================= -->
 
-            if(result.status === "success"){
 
 
-                showNotification(
-                    "Thank you for confirming ❤️"
-                );
+<header id="home" class="hero">
 
 
-                rsvpForm.reset();
+<div class="overlay">
 
 
-            }
+<h3>
+The Wedding Of
+</h3>
 
-            else {
+<br>
+<h1>
 
+Hafiz Ilham
 
-                alert(
-                    result.message ||
-                    "Failed to send RSVP."
-                );
 
+<br>
 
-            }
 
+&
 
+<br>
 
-        }
+Sera Vika Eviana
 
-        catch(error){
 
+</h1>
 
-            console.error(
-                "RSVP Error:",
-                error
-            );
 
+<p>
+XXX
+</p>
 
-            alert(
-                "Network error. Please try again."
-            );
 
+<!-- Personalized Guest -->
 
-        }
 
 
+<div class="guest-name">
 
-        button.disabled = false;
 
-        button.innerText = "Send RSVP";
 
+<p>
+Dear
+</p>
 
 
-    });
 
+<h2 id="guestName">
+Our Lovely Guest
+</h2>
 
 
-}
+<small>
+You're invited to celebrate our wedding.
+</small>
 
 
 
+</div>
 
-/* ==========================================
-   WISH SUBMIT
-========================================== */
 
 
-const wishForm =
-document.getElementById("wishForm");
+<a href="#couple" class="btn">
 
-if(wishForm){
+Open Invitation
 
+</a>
 
-    wishForm.addEventListener(
-        "submit",
-        async function(e){
 
-        e.preventDefault();
 
-        const button =
-        wishForm.querySelector("button");
 
-        button.disabled = true;
 
-        button.innerText =
-        "Sending...";
 
-        const data = {
 
+</div>
 
-            action:"wish",
 
-            nama:
-            wishForm.querySelector(
-                "input[name='nama']"
-            ).value,
 
-            ucapan:
-            wishForm.querySelector(
-                "textarea[name='ucapan']"
-            ).value
 
+</header>
 
-        };
 
-        try {
 
 
 
-            const response =
-            await fetch(
-                SCRIPT_URL,
-                {
+<!-- ================= COUPLE ================= -->
 
-                    method:"POST",
 
-                    body:
-                    new URLSearchParams(data)
+<section id="couple">
 
-                }
-            );
 
-            const result =
-            await response.json();
 
+<h2 data-aos="fade-up">
+Bride & Groom
+</h2>
+<div class="couple-wrapper">
+<div class="card" data-aos="fade-right">
 
-            if(result.status === "success"){
+<img src="assets/photos/groom.jpg"
+alt="Hafiz Ilham">
 
 
-                showNotification(
-                    "Thank you for your wishes ❤️"
-                );
 
+<h3>
+Hafiz Ilham
+</h3>
 
-                wishForm.reset();
 
+<p>
+The Groom
+</p>
 
-                loadWishes();
 
-            }
 
-            else {
 
 
-                alert(
-                    result.message ||
-                    "Failed to send wishes."
-                );
+</div>
 
-            }
+<div class="card" data-aos="fade-left">
+  
+<img src="assets/photos/bride.jpg"
+alt="Sera Vika Eviana">
 
-        }
 
-        catch(error){
 
+<h3>
+Sera Vika Eviana
+</h3>
 
-            console.error(
-                "Wish Error:",
-                error
-            );
 
 
-            alert(
-                "Network error."
-            );
 
 
-        }
+<p>
+The Bride
+</p>
 
-        button.disabled=false;
 
-        button.innerText =
-        "Send Wishes";
 
-    });
 
-}
+</div>
+</div>
+</section>
 
+  
+<!-- ================= COUNTDOWN ================= -->
 
-/* ==========================================
-   LOAD WISHES
-========================================== */
 
-async function loadWishes(){
 
-    const container =
-    document.getElementById(
-        "wishList"
-    );
+<section id="countdown">
 
-    if(!container)
-        return;
+<h2>
+Countdown
+</h2>
 
-    try {
 
-        const response =
-        await fetch(
-            SCRIPT_URL +
-            "?action=getWishes"
-        );
 
-        const wishes =
-        await response.json();
 
-        container.innerHTML="";
 
-        wishes
-        .reverse()
-        .forEach(item=>{
 
-            const div =
-            document.createElement(
-                "div"
-            );
+<div class="countdown">
 
-            div.className =
-            "wish";
 
-            div.innerHTML = `
 
-                <h4>
-                ${escapeHtml(item.nama)}
-                </h4>
 
-                <p>
-                ${escapeHtml(item.ucapan)}
-                </p>
+<div>
 
-            `;
+<span id="days">
+0
+</span>
 
-            container.appendChild(div);
+<small>
+Days
+</small>
 
-        });
+</div>
 
-    }
+<div>
 
-    catch(error){
+<span id="hours">
+0
+</span>
 
-        console.error(
-            "Load wishes error:",
-            error
-        );
 
-    }
+<small>
+Hours
+</small>
 
-}
+</div>
 
 
-/* ==========================================
-   ESCAPE HTML
-========================================== */
+<div>
 
-function escapeHtml(text){
 
-    if(!text)
-        return "";
+<span id="minutes">
+0
+</span>
 
-    return text
+<small>
+Minutes
+</small>
 
-    .replace(
-        /&/g,
-        "&amp;"
-    )
+</div>
 
-    .replace(
-        /</g,
-        "&lt;"
-    )
+<div>
 
-    .replace(
-        />/g,
-        "&gt;"
-    )
+<span id="seconds">
+0
+</span>
 
-    .replace(
-        /"/g,
-        "&quot;"
-    )
+<small>
+Seconds
+</small>
 
-    .replace(
-        /'/g,
-        "&#039;"
-    );
+</div>
 
+</div>
+  
+</section>
 
-}
 
 
-/* ==========================================
-   NOTIFICATION
-========================================== */
+<!-- ================= STORY ================= -->
 
 
-function showNotification(message){
 
+<section id="story">
 
-    alert(message);
 
 
-}
 
-/* ==========================================
-   INITIAL LOAD
-========================================== */
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+<h2>
+Our Story
+</h2>
 
 
-    loadWishes();
 
 
-});
+
+<div class="timeline">
+<div class="timeline-item">
+
+<h3>
+First Meet
+</h3>
+
+
+<p>
+Write your story here.
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<h3>
+Relationship
+</h3>
+
+<p>
+Write your story here.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>
+Engagement
+</h3>
+
+<p>
+Write your story here.
+</p>
+
+</div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+  
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+
+
+
+
+
+
+<h2>
+Gallery
+</h2>
+
+
+
+
+
+
+
+<div class="gallery">
+
+
+
+
+</div>
+  
+</section>
+
+<!-- ================= EVENT ================= -->
+
+
+
+
+
+<section id="event">
+
+
+
+<h2>
+Wedding Event
+</h2>
+
+<div class="event-card">
+
+<p>
+Date : XXX
+</p>
+
+<p>
+Time : XXX
+</p>
+
+<p>
+Venue : XXX
+</p>
+
+<a href="https://maps.google.com/..."
+target="_blank"
+class="btn">
+Open Google Maps
+</a>
+
+</div>
+</section>
+
+<!-- ================= RSVP ================= -->
+
+<section id="rsvp">
+
+<h2>
+RSVP
+</h2>
+
+<form id="rsvpForm">
+
+<input
+type="text"
+name="nama"
+placeholder="Nama"
+required>
+
+<select name="attendance">
+
+<option value="Hadir">
+Hadir
+</option>
+
+
+
+
+
+
+
+<option value="Tidak Hadir">
+Tidak Hadir
+</option>
+</select>
+
+<select name="guest">
+
+
+
+
+<option value="0">
+0 Guest
+</option>
+
+
+<option value="1">
+1 Guest
+</option>
+<option value="2">
+
+2 Guests
+</option>
+</select>
+
+<button type="submit">
+Send RSVP
+</button>
+</form>
+</section>
+
+<!-- ================= WISHES ================= -->
+
+
+
+
+<section id="wishes">
+
+<h2>
+Wedding Wishes
+</h2>
+
+<form id="wishForm">
+
+<input
+type="text"
+placeholder="Nama"
+required>
+
+<textarea
+placeholder="Write your wishes..."
+required></textarea>
+
+<button>
+
+
+
+Send Wishes
+
+</button>
+</form>
+
+
+<div id="wishList">
+
+</div>
+</section>
+
+<section id="gift">
+
+<h2>
+Want to give us a gift?
+</h2>
+
+<p>
+If you'd like to celebrate with a gift,
+you can use the account below.
+</p>
+
+
+<div class="gift-container">
+
+
+<!-- SERA ACCOUNT -->
+
+<div class="bank-card">
+
+<h3>
+Sera Vika Eviana
+</h3>
+
+
+<p>
+<strong>BCA</strong>
+<br>
+2491918171
+</p>
+
+<p>
+<strong>Mandiri</strong>
+<br>
+1170011271988
+</p>
+
+</div>
+
+<!-- HAFIZ ACCOUNT -->
+
+<div class="bank-card">
+
+
+<h3>
+Hafiz Ilham
+</h3>
+
+
+<p>
+<strong>BCA</strong>
+<br>
+6220571457
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+  
+<footer id="footer">
+
+<div class="footer-content">
+
+<h3>
+Hafiz Ilham & Sera Vika Eviana
+</h3>
+
+<p>
+Made with ❤️ for our special day
+</p>
+
+<p>
+Powered by
+</p>
+
+<p class="footer-brand">
+@seravika_eviana
+</p>
+
+<a href="#home" class="back-top">
+↑
+</a>
+
+</div>
+
+</footer>
+
+<!-- ================= MUSIC ================= -->
+
+
+<audio id="bgMusic" loop>
+
+<source
+src="assets/music/marry-your-daughter.mp3"
+type="audio/mpeg">
+
+
+</audio>
+
+<button id="musicBtn">
+
+🔊
+
+</button>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/google-sheet.js"></script>
+<script>
+
+AOS.init();
+
+</script>
+
+</body>
+
+</html>
