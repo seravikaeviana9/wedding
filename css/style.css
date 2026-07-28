@@ -770,7 +770,121 @@ footer h3 {
 
 
 
+/* ===============================
+   GIFT TWO COLUMN LAYOUT
+================================ */
 
+
+.gift-container{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:60px;
+
+}
+
+
+
+.gift-qr{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+
+
+.gift-qr img{
+
+    width:280px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.gift-account{
+
+    flex:1;
+
+}
+
+
+
+.bank-card{
+
+    background:white;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.bank-card h3{
+
+    color:var(--primary);
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.bank-card p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+    .gift-container{
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+
+    .gift-qr img{
+
+        width:220px;
+
+    }
+
+
+}
 
 /* ===============================
    MUSIC BUTTON
