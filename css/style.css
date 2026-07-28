@@ -7,16 +7,19 @@
     --dark: #2b2b2b;
     --text: #666;
 
+    --footer: #8b6a3e;
+
     --shadow: 0 15px 35px rgba(0,0,0,0.08);
 
-    --radius: 20px;
+    --radius:20px;
 
 }
 
 
 /* ===============================
-   RESET
+RESET
 ================================ */
+
 
 * {
 
@@ -27,6 +30,7 @@
 }
 
 
+
 html {
 
     scroll-behavior:smooth;
@@ -34,9 +38,10 @@ html {
 }
 
 
+
 body {
 
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 
     background:var(--secondary);
 
@@ -47,13 +52,15 @@ body {
 }
 
 
+
 h1,
 h2,
 h3 {
 
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
 
 }
+
 
 
 section {
@@ -61,6 +68,7 @@ section {
     padding:90px 8%;
 
 }
+
 
 
 img {
@@ -74,7 +82,7 @@ img {
 
 
 /* ===============================
-   NAVIGATION
+NAVIGATION
 ================================ */
 
 
@@ -95,7 +103,6 @@ nav {
 
     padding:20px 8%;
 
-
     background:rgba(255,255,255,.85);
 
     backdrop-filter:blur(15px);
@@ -103,6 +110,7 @@ nav {
     z-index:1000;
 
 }
+
 
 
 .logo {
@@ -128,7 +136,10 @@ nav ul {
 }
 
 
+
 nav a {
+
+    text-decoration:none;
 
     color:var(--dark);
 
@@ -137,6 +148,7 @@ nav a {
     transition:.3s;
 
 }
+
 
 
 nav a:hover {
@@ -148,8 +160,9 @@ nav a:hover {
 
 
 
+
 /* ===============================
-   HERO
+HERO
 ================================ */
 
 
@@ -159,24 +172,27 @@ nav a:hover {
 
     min-height:700px;
 
+
     background:
 
     linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
     ),
 
     url("../assets/photos/hero.jpg");
+
 
     background-size:cover;
 
     background-position:center;
 
+
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -227,7 +243,7 @@ nav a:hover {
 
 
 /* ===============================
-   PERSONAL GUEST NAME
+GUEST NAME
 ================================ */
 
 
@@ -239,19 +255,18 @@ nav a:hover {
 
     max-width:450px;
 
+
     background:rgba(255,255,255,.15);
 
-    border-radius:20px;
-
     backdrop-filter:blur(10px);
+
+    border-radius:20px;
 
 }
 
 
 
 .guest-name p {
-
-    font-size:20px;
 
     color:#eee;
 
@@ -265,18 +280,6 @@ nav a:hover {
 
     font-size:48px;
 
-    margin:10px 0;
-
-}
-
-
-
-.guest-name small {
-
-    font-size:15px;
-
-    color:#eee;
-
 }
 
 
@@ -284,7 +287,7 @@ nav a:hover {
 
 
 /* ===============================
-   BUTTON
+BUTTON
 ================================ */
 
 
@@ -302,7 +305,7 @@ nav a:hover {
 
     margin-top:20px;
 
-    transition:.3s;
+    text-decoration:none;
 
 }
 
@@ -321,7 +324,7 @@ nav a:hover {
 
 
 /* ===============================
-   SECTION TITLE
+SECTION TITLE
 ================================ */
 
 
@@ -342,7 +345,7 @@ section h2 {
 
 
 /* ===============================
-   COUPLE
+COUPLE
 ================================ */
 
 
@@ -364,9 +367,9 @@ section h2 {
 
     background:white;
 
-    padding:30px;
-
     width:330px;
+
+    padding:30px;
 
     text-align:center;
 
@@ -398,16 +401,6 @@ section h2 {
 
     font-size:40px;
 
-    margin-top:20px;
-
-}
-
-
-
-.card p {
-
-    color:var(--text);
-
 }
 
 
@@ -415,7 +408,7 @@ section h2 {
 
 
 /* ===============================
-   COUNTDOWN
+COUNTDOWN
 ================================ */
 
 
@@ -449,9 +442,9 @@ section h2 {
 
     padding:30px;
 
-    text-align:center;
-
     border-radius:20px;
+
+    text-align:center;
 
     box-shadow:var(--shadow);
 
@@ -461,19 +454,11 @@ section h2 {
 
 .countdown span {
 
-    font-size:50px;
-
     color:var(--primary);
 
+    font-size:50px;
+
     font-weight:bold;
-
-}
-
-
-
-.countdown small {
-
-    display:block;
 
 }
 
@@ -482,7 +467,7 @@ section h2 {
 
 
 /* ===============================
-   STORY
+STORY
 ================================ */
 
 
@@ -514,18 +499,10 @@ section h2 {
 
 
 
-.timeline-item h3 {
-
-    font-size:35px;
-
-}
-
-
-
 
 
 /* ===============================
-   GALLERY
+GALLERY
 ================================ */
 
 
@@ -534,7 +511,6 @@ section h2 {
     display:grid;
 
     grid-template-columns:
-
     repeat(auto-fit,minmax(250px,1fr));
 
     gap:20px;
@@ -545,23 +521,13 @@ section h2 {
 
 .gallery img {
 
-    height:350px;
-
     width:100%;
+
+    height:350px;
 
     object-fit:cover;
 
     border-radius:20px;
-
-    transition:.4s;
-
-}
-
-
-
-.gallery img:hover {
-
-    transform:scale(1.05);
 
 }
 
@@ -570,7 +536,7 @@ section h2 {
 
 
 /* ===============================
-   EVENT
+EVENT
 ================================ */
 
 
@@ -594,18 +560,10 @@ section h2 {
 
 
 
-.event-card p {
-
-    margin:15px;
-
-}
-
-
-
 
 
 /* ===============================
-   FORM
+FORM
 ================================ */
 
 
@@ -629,15 +587,12 @@ input,
 textarea,
 select {
 
-    width:100%;
 
     padding:18px;
 
     border:none;
 
     border-radius:15px;
-
-    background:white;
 
     box-shadow:var(--shadow);
 
@@ -667,8 +622,6 @@ button {
 
     border-radius:50px;
 
-    cursor:pointer;
-
 }
 
 
@@ -676,7 +629,7 @@ button {
 
 
 /* ===============================
-   WISHES
+WISHES
 ================================ */
 
 
@@ -706,121 +659,86 @@ button {
 
 
 
-.wish h4 {
-
-    color:var(--primary);
-
-}
-
-
-
 
 
 /* ===============================
-   GIFT ACCOUNT TWO COLUMN
+GIFT
 ================================ */
 
 
-.gift-container{
+#gift {
 
-    max-width:900px;
-
-    margin:50px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:40px;
+    padding-bottom:30px;
 
 }
 
 
 
-.bank-card{
+.gift-container {
+
+
+    max-width:800px;
+
+    margin:30px auto 0;
+
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+
+.bank-card {
+
 
     flex:1;
 
     background:white;
 
-    padding:40px 30px;
+    padding:30px 25px;
 
-    border-radius:25px;
+
+    border-radius:22px;
 
     box-shadow:var(--shadow);
 
     text-align:center;
 
-    transition:.3s;
 
 }
 
 
 
-.bank-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
-.bank-card h3{
+.bank-card h3 {
 
     color:var(--primary);
 
-    font-size:36px;
+    font-size:32px;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
 
 
-.bank-card p{
-
-    font-size:20px;
-
-    line-height:2;
+.bank-card p {
 
     color:var(--text);
 
-}
+    font-size:18px;
 
-
-
-.bank-card strong{
-
-    color:var(--dark);
+    line-height:1.8;
 
 }
 
 
 
 
-@media(max-width:768px){
-
-
-    .gift-container{
-
-        flex-direction:column;
-
-        padding:0 20px;
-
-    }
-
-
-    .bank-card h3{
-
-        font-size:30px;
-
-    }
-
-
-}
 
 /* ===============================
-   MUSIC BUTTON
+MUSIC BUTTON
 ================================ */
 
 
@@ -847,51 +765,23 @@ button {
 }
 
 
-/* ===============================
-   MUSIC BUTTON
-================================ */
 
-
-#musicBtn {
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:65px;
-
-    height:65px;
-
-    border-radius:50%;
-
-    font-size:25px;
-
-    z-index:9999;
-
-    box-shadow:var(--shadow);
-
-}
 
 
 /* ===============================
-   SIMPLE LUXURY FOOTER
-================================ */
-/* ===============================
-   COMPACT LUXURY FOOTER
+FOOTER
 ================================ */
 
 
 #footer {
 
-    background:#8b6a3e;
+    background:var(--footer);
 
     color:white;
 
     text-align:center;
 
-    padding:25px 20px 20px;
+    padding:18px 15px;
 
 }
 
@@ -899,7 +789,7 @@ button {
 
 .footer-content {
 
-    max-width:500px;
+    max-width:400px;
 
     margin:auto;
 
@@ -909,13 +799,11 @@ button {
 
 .footer-content h3 {
 
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 
-    font-size:14px;
+    font-size:13px;
 
-    font-weight:600;
-
-    margin-bottom:8px;
+    margin-bottom:5px;
 
 }
 
@@ -923,13 +811,13 @@ button {
 
 .footer-content p {
 
-    font-size:12px;
+    font-size:11px;
 
-    color:#f5ead8;
+    line-height:1.4;
 
-    line-height:1.5;
+    margin:2px 0;
 
-    margin:4px 0;
+    color:#f8ead3;
 
 }
 
@@ -937,19 +825,24 @@ button {
 
 .footer-brand {
 
-    font-size:13px !important;
+    color:white!important;
 
-    letter-spacing:1.5px;
-
-    color:white !important;
-
-    margin-top:5px !important;
+    letter-spacing:1px;
 
 }
 
 
 
 .back-top {
+
+
+    width:25px;
+
+    height:25px;
+
+
+    margin:8px auto 0;
+
 
     display:flex;
 
@@ -958,136 +851,100 @@ button {
     align-items:center;
 
 
-    width:32px;
-
-    height:32px;
-
-
-    margin:15px auto 0;
-
-
     border-radius:50%;
 
 
-    color:#8b6a3e;
-
     background:#e5c58b;
 
+    color:#8b6a3e;
 
-    font-size:16px;
 
 }
 
+
+
+
+
 /* ===============================
-   MOBILE RESPONSIVE
+MOBILE
 ================================ */
 
 
 @media(max-width:768px){
 
 
-    nav {
+nav {
 
-        flex-direction:column;
+    flex-direction:column;
 
-        gap:15px;
-
-    }
-
-
-    nav ul {
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:12px;
-
-    }
-
-
-
-    .overlay h1 {
-
-        font-size:45px;
-
-    }
-
-
-
-    .overlay h3 {
-
-        font-size:25px;
-
-    }
-
-
-
-    .guest-name h2 {
-
-        font-size:35px;
-
-    }
-
-
-
-    section h2 {
-
-        font-size:40px;
-
-    }
-
-
-
-    .countdown div {
-
-        width:130px;
-
-    }
-
-
-
-    .card {
-
-        width:100%;
-
-    }
-
-
-
-    .gift-container {
-
-        flex-direction:column;
-
-        padding:0 20px;
-
-    }
-
-
-
-    .bank-card h3 {
-
-        font-size:30px;
-
-    }
-
-
-
-    .footer-center h1 {
-
-        font-size:55px;
-
-    }
-
-
-
-    .footer-message {
-
-        font-size:22px;
-
-    }
-
+    gap:15px;
 
 }
 
 
+
+nav ul {
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+
+.overlay h1 {
+
+    font-size:45px;
+
+}
+
+
+
+.overlay h3 {
+
+    font-size:25px;
+
+}
+
+
+
+section h2 {
+
+    font-size:40px;
+
+}
+
+
+
+.gift-container {
+
+    flex-direction:column;
+
+}
+
+
+
+.bank-card h3 {
+
+    font-size:30px;
+
+}
+
+
+
+.countdown div {
+
+    width:130px;
+
+}
+
+
+
+.card {
+
+    width:100%;
+
+}
+
+}
