@@ -1,193 +1,294 @@
-/* ===============================
-   GOOGLE FONTS
-================================== */
+:root {
 
-:root{
+    --primary: #c8a96a;
+    --secondary: #f8f3eb;
+    --cream: #fffaf2;
+    --white: #ffffff;
+    --dark: #2b2b2b;
+    --text: #666;
 
-    --primary:#C8A96A;
-    --secondary:#F8F5F0;
-    --white:#ffffff;
-    --dark:#2D2D2D;
-    --text:#666666;
+    --shadow: 0 15px 35px rgba(0,0,0,0.08);
 
-    --shadow:0 10px 30px rgba(0,0,0,.08);
-
-    --radius:18px;
+    --radius: 20px;
 
 }
 
-*{
+
+/* ===============================
+   RESET
+================================ */
+
+* {
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
-html{
+
+html {
+
     scroll-behavior:smooth;
+
 }
 
-body{
 
-    font-family:'Poppins',sans-serif;
+body {
+
+    font-family:'Poppins', sans-serif;
+
     background:var(--secondary);
+
     color:var(--dark);
+
     overflow-x:hidden;
-    line-height:1.7;
 
 }
 
-img{
+
+h1,
+h2,
+h3 {
+
+    font-family:'Cormorant Garamond', serif;
+
+}
+
+
+section {
+
+    padding:90px 8%;
+
+}
+
+
+img {
 
     max-width:100%;
+
     display:block;
 
 }
 
-a{
 
-    text-decoration:none;
-
-}
-
-section{
-
-    padding:90px 10%;
-
-}
-
-h1,h2,h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-}
-
-h2{
-
-    text-align:center;
-    font-size:52px;
-    margin-bottom:60px;
-    color:var(--primary);
-
-}
 
 /* ===============================
-NAVBAR
-================================== */
+   NAVIGATION
+================================ */
 
-nav{
+
+nav {
 
     position:fixed;
-    width:100%;
+
     top:0;
     left:0;
 
+    width:100%;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:20px 8%;
 
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(12px);
 
-    z-index:999;
+    background:rgba(255,255,255,.85);
 
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
+    backdrop-filter:blur(15px);
+
+    z-index:1000;
 
 }
 
-.logo{
 
-    font-size:30px;
-    color:var(--primary);
+.logo {
+
+    font-size:35px;
+
     font-weight:bold;
 
+    color:var(--primary);
+
 }
 
-nav ul{
+
+
+nav ul {
 
     display:flex;
-    list-style:none;
+
     gap:25px;
+
+    list-style:none;
 
 }
 
-nav ul a{
+
+nav a {
 
     color:var(--dark);
+
+    font-size:14px;
+
     transition:.3s;
 
 }
 
-nav ul a:hover{
+
+nav a:hover {
 
     color:var(--primary);
 
 }
 
-/* ===============================
-HERO
-================================== */
 
-.hero{
+
+
+/* ===============================
+   HERO
+================================ */
+
+
+.hero {
 
     height:100vh;
 
-    background:url("../assets/photos/hero.jpg") center center/cover;
+    min-height:700px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+
+    url("../assets/photos/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
 
     display:flex;
-    justify-content:center;
+
     align-items:center;
 
-    position:relative;
+    justify-content:center;
 
 }
 
-.overlay{
 
-    position:absolute;
-    inset:0;
 
-    background:rgba(0,0,0,.45);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.overlay {
 
     text-align:center;
+
     color:white;
 
-    padding:20px;
+    padding:30px;
 
 }
 
-.overlay h3{
 
-    font-size:32px;
-    letter-spacing:2px;
 
-}
+.overlay h3 {
 
-.overlay h1{
+    font-size:35px;
 
-    font-size:74px;
-    margin:25px 0;
+    letter-spacing:3px;
 
 }
 
-.overlay p{
 
-    font-size:22px;
-    margin-bottom:35px;
+
+.overlay h1 {
+
+    font-size:80px;
+
+    line-height:1;
+
+    margin:30px 0;
 
 }
+
+
+
+.overlay p {
+
+    font-size:20px;
+
+}
+
+
+
+
 
 /* ===============================
-BUTTON
-================================== */
+   PERSONAL GUEST NAME
+================================ */
 
-.btn{
+
+.guest-name {
+
+    margin:35px auto;
+
+    padding:25px;
+
+    max-width:450px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.guest-name p {
+
+    font-size:20px;
+
+    color:#eee;
+
+}
+
+
+
+.guest-name h2 {
+
+    color:white;
+
+    font-size:48px;
+
+    margin:10px 0;
+
+}
+
+
+
+.guest-name small {
+
+    font-size:15px;
+
+    color:#eee;
+
+}
+
+
+
+
+
+/* ===============================
+   BUTTON
+================================ */
+
+
+.btn {
 
     display:inline-block;
 
@@ -199,13 +300,15 @@ BUTTON
 
     border-radius:50px;
 
-    transition:.3s;
+    margin-top:20px;
 
-    font-weight:600;
+    transition:.3s;
 
 }
 
-.btn:hover{
+
+
+.btn:hover {
 
     transform:translateY(-5px);
 
@@ -213,133 +316,191 @@ BUTTON
 
 }
 
+
+
+
+
 /* ===============================
-COUPLE
-================================== */
+   SECTION TITLE
+================================ */
 
-.couple-wrapper{
 
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-
-}
-
-.card{
-
-    background:white;
-
-    width:320px;
-
-    border-radius:var(--radius);
-
-    padding:25px;
+section h2 {
 
     text-align:center;
 
-    box-shadow:var(--shadow);
+    color:var(--primary);
 
-    transition:.35s;
+    font-size:55px;
 
-}
-
-.card:hover{
-
-    transform:translateY(-8px);
+    margin-bottom:60px;
 
 }
 
-.card img{
 
-    width:220px;
-    height:220px;
 
-    border-radius:50%;
 
-    object-fit:cover;
-
-    margin:auto;
-
-}
-
-.card h3{
-
-    margin-top:20px;
-    font-size:38px;
-
-}
-
-.card p{
-
-    color:var(--text);
-
-}
 
 /* ===============================
-COUNTDOWN
-================================== */
+   COUPLE
+================================ */
 
-.countdown{
+
+.couple-wrapper {
 
     display:flex;
 
     justify-content:center;
 
-    flex-wrap:wrap;
+    gap:40px;
 
-    gap:25px;
+    flex-wrap:wrap;
 
 }
 
-.countdown div{
 
-    width:160px;
+
+.card {
 
     background:white;
 
     padding:30px;
 
-    border-radius:20px;
+    width:330px;
 
     text-align:center;
+
+    border-radius:var(--radius);
 
     box-shadow:var(--shadow);
 
 }
 
-.countdown span{
 
-    font-size:52px;
+
+.card img {
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin:auto;
+
+}
+
+
+
+.card h3 {
+
+    font-size:40px;
+
+    margin-top:20px;
+
+}
+
+
+
+.card p {
+
+    color:var(--text);
+
+}
+
+
+
+
+
+/* ===============================
+   COUNTDOWN
+================================ */
+
+
+#countdown {
+
+    background:var(--cream);
+
+}
+
+
+
+.countdown {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.countdown div {
+
+    background:white;
+
+    width:150px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.countdown span {
+
+    font-size:50px;
+
     color:var(--primary);
+
     font-weight:bold;
 
 }
 
-.countdown small{
+
+
+.countdown small {
 
     display:block;
-    margin-top:10px;
-    color:var(--text);
 
 }
 
-/* ===============================
-TIMELINE
-================================== */
 
-.timeline{
+
+
+
+/* ===============================
+   STORY
+================================ */
+
+
+.timeline {
 
     max-width:900px;
+
     margin:auto;
 
 }
 
-.timeline-item{
+
+
+.timeline-item {
 
     background:white;
 
-    padding:30px;
+    padding:35px;
 
     margin-bottom:30px;
 
@@ -351,57 +512,69 @@ TIMELINE
 
 }
 
-.timeline-item h3{
 
-    font-size:34px;
-    margin-bottom:10px;
+
+.timeline-item h3 {
+
+    font-size:35px;
 
 }
 
-/* ===============================
-GALLERY
-================================== */
 
-.gallery{
+
+
+
+/* ===============================
+   GALLERY
+================================ */
+
+
+.gallery {
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
 
     gap:20px;
 
 }
 
-.gallery a{
 
-    overflow:hidden;
 
-    border-radius:18px;
+.gallery img {
 
-}
-
-.gallery img{
-
-    width:100%;
     height:350px;
 
+    width:100%;
+
     object-fit:cover;
+
+    border-radius:20px;
 
     transition:.4s;
 
 }
 
-.gallery img:hover{
 
-    transform:scale(1.1);
+
+.gallery img:hover {
+
+    transform:scale(1.05);
 
 }
 
-/* ===============================
-EVENT
-================================== */
 
-.event-card{
+
+
+
+/* ===============================
+   EVENT
+================================ */
+
+
+.event-card {
 
     max-width:700px;
 
@@ -411,29 +584,34 @@ EVENT
 
     padding:40px;
 
-    border-radius:20px;
-
     text-align:center;
+
+    border-radius:20px;
 
     box-shadow:var(--shadow);
 
 }
 
-.event-card p{
 
-    margin:18px 0;
 
-    font-size:18px;
+.event-card p {
+
+    margin:15px;
 
 }
 
+
+
+
+
 /* ===============================
-FORM
-================================== */
+   FORM
+================================ */
 
-form{
 
-    max-width:650px;
+form {
+
+    max-width:600px;
 
     margin:auto;
 
@@ -441,13 +619,17 @@ form{
 
     flex-direction:column;
 
-    gap:18px;
+    gap:20px;
 
 }
 
+
+
 input,
 textarea,
-select{
+select {
+
+    width:100%;
 
     padding:18px;
 
@@ -461,65 +643,60 @@ select{
 
     font-size:16px;
 
-    outline:none;
+}
+
+
+
+textarea {
+
+    min-height:150px;
 
 }
 
-textarea{
 
-    resize:none;
 
-    min-height:170px;
-
-}
-
-button{
-
-    border:none;
+button {
 
     background:var(--primary);
 
     color:white;
 
-    padding:18px;
+    border:none;
+
+    padding:17px;
 
     border-radius:50px;
 
     cursor:pointer;
 
-    transition:.3s;
-
-    font-size:16px;
-
 }
 
-button:hover{
 
-    transform:translateY(-3px);
 
-}
+
 
 /* ===============================
-WISHES
-================================== */
+   WISHES
+================================ */
 
-#wishList{
 
-    margin-top:40px;
+#wishList {
 
     max-width:700px;
 
-    margin-inline:auto;
+    margin:40px auto;
 
 }
 
-.wish{
+
+
+.wish {
 
     background:white;
 
-    margin-bottom:20px;
-
     padding:25px;
+
+    margin-bottom:20px;
 
     border-radius:15px;
 
@@ -527,41 +704,51 @@ WISHES
 
 }
 
-.wish h4{
+
+
+.wish h4 {
 
     color:var(--primary);
 
-    margin-bottom:10px;
-
 }
 
-/* ===============================
-GIFT
-================================== */
 
-#gift{
+
+
+
+/* ===============================
+   GIFT
+================================ */
+
+
+#gift {
 
     text-align:center;
 
 }
 
-#gift img{
 
-    width:240px;
 
-    margin:35px auto;
+#gift img {
 
-    border-radius:18px;
+    width:250px;
 
-    box-shadow:var(--shadow);
+    margin:40px auto;
+
+    border-radius:20px;
 
 }
 
-/* ===============================
-FOOTER
-================================== */
 
-footer{
+
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+
+footer {
 
     background:#222;
 
@@ -569,29 +756,34 @@ footer{
 
     text-align:center;
 
-    padding:60px 20px;
+    padding:70px 20px;
 
 }
 
-footer h3{
 
-    font-size:40px;
 
-    margin-bottom:15px;
+footer h3 {
+
+    font-size:45px;
 
 }
+
+
+
+
 
 /* ===============================
-MUSIC BUTTON
-================================== */
+   MUSIC BUTTON
+================================ */
 
-#musicBtn{
+
+#musicBtn {
 
     position:fixed;
 
-    bottom:25px;
-
     right:25px;
+
+    bottom:25px;
 
     width:65px;
 
@@ -599,132 +791,93 @@ MUSIC BUTTON
 
     border-radius:50%;
 
-    font-size:26px;
+    font-size:25px;
 
-    z-index:999;
+    z-index:9999;
 
     box-shadow:var(--shadow);
 
 }
 
+
+
+
+
 /* ===============================
-RESPONSIVE
-================================== */
+   MOBILE
+================================ */
 
-@media(max-width:992px){
 
-    nav{
+@media(max-width:768px){
+
+
+    nav {
 
         flex-direction:column;
+
         gap:15px;
 
     }
 
-    nav ul{
+
+
+    nav ul {
 
         flex-wrap:wrap;
+
         justify-content:center;
 
-    }
-
-    .overlay h1{
-
-        font-size:56px;
+        gap:12px;
 
     }
 
-    h2{
 
-        font-size:42px;
 
-    }
+    .overlay h1 {
 
-}
-
-@media(max-width:768px){
-
-    section{
-
-        padding:70px 25px;
+        font-size:45px;
 
     }
 
-    .overlay h1{
 
-        font-size:42px;
 
-    }
+    .overlay h3 {
 
-    .overlay h3{
-
-        font-size:24px;
+        font-size:25px;
 
     }
 
-    .overlay p{
 
-        font-size:18px;
 
-    }
+    .guest-name h2 {
 
-    .countdown div{
-
-        width:130px;
+        font-size:35px;
 
     }
 
-    .countdown span{
+
+
+    section h2 {
 
         font-size:40px;
 
     }
 
-    .card{
+
+
+    .countdown div {
+
+        width:130px;
+
+    }
+
+
+
+    .card {
 
         width:100%;
 
     }
 
-    .card img{
-
-        width:180px;
-        height:180px;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    nav{
-
-        padding:15px;
-
-    }
-
-    nav ul{
-
-        gap:12px;
-        font-size:14px;
-
-    }
-
-    .overlay h1{
-
-        font-size:34px;
-
-    }
-
-    .btn{
-
-        padding:14px 28px;
-
-    }
-
-    h2{
-
-        font-size:34px;
-
-    }
 
 }
