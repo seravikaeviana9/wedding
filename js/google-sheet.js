@@ -2,206 +2,382 @@
    GOOGLE SHEETS CONFIGURATION
 ========================================== */
 
-// Replace with your deployed Google Apps Script Web App URL
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw38rOBxXmvJQqnNXUGgTwaDxXo8kGsuMeQ0CWSc9acpGWIwKVGV9TDB6DPvsb8hRrF6g/exec";
+
+// Google Apps Script Web App URL
+const SCRIPT_URL = 
+"https://script.google.com/macros/s/AKfycbw38rOBxXmvJQqnNXUGgTwaDxXo8kGsuMeQ0CWSc9acpGWIwKVGV9TDB6DPvsb8hRrF6g/exec";
+
+
 
 /* ==========================================
    RSVP SUBMIT
 ========================================== */
 
+
 const rsvpForm = document.getElementById("rsvpForm");
+
 
 if (rsvpForm) {
 
-    rsvpForm.addEventListener("submit", async function (e) {
+
+    rsvpForm.addEventListener(
+        "submit",
+        async function(e){
+
 
         e.preventDefault();
 
-        const submitButton = rsvpForm.querySelector("button");
-        submitButton.disabled = true;
-        submitButton.innerText = "Sending...";
+
+        const button = 
+        rsvpForm.querySelector("button");
+
+
+        button.disabled = true;
+
+        button.innerText = "Sending...";
+
+
 
         const data = {
-            action: "rsvp",
-            nama: rsvpForm.nama.value,
-            attendance: rsvpForm.attendance.value,
-            guest: rsvpForm.guest.value
+
+
+            action:"rsvp",
+
+            nama:
+            rsvpForm.nama.value,
+
+
+            attendance:
+            rsvpForm.attendance.value,
+
+
+            guest:
+            rsvpForm.guest.value
+
+
         };
+
+
 
         try {
 
-            const response = await fetch(SCRIPT_URL, {
 
-                method: "POST",
+            const response = await fetch(
+                SCRIPT_URL,
+                {
 
-                body: JSON.stringify(data),
+                    method:"POST",
 
-                headers: {
-                    "Content-Type": "application/json"
+                    body:
+                    new URLSearchParams(data)
+
                 }
+            );
 
-            });
 
-            const result = await response.json();
 
-            if (result.status === "success") {
+            const result =
+            await response.json();
 
-                showNotification("Thank you for confirming ❤️");
+
+
+            if(result.status === "success"){
+
+
+                showNotification(
+                    "Thank you for confirming ❤️"
+                );
+
 
                 rsvpForm.reset();
 
-            } else {
-
-                alert(result.message || "Failed to send RSVP.");
 
             }
 
-        } catch (err) {
+            else {
 
-            console.error(err);
 
-            alert("Network error.");
+                alert(
+                    result.message ||
+                    "Failed to send RSVP."
+                );
+
+
+            }
+
+
 
         }
 
-        submitButton.disabled = false;
-        submitButton.innerText = "Send RSVP";
+        catch(error){
+
+
+            console.error(
+                "RSVP Error:",
+                error
+            );
+
+
+            alert(
+                "Network error. Please try again."
+            );
+
+
+        }
+
+
+
+        button.disabled = false;
+
+        button.innerText = "Send RSVP";
+
+
 
     });
 
+
+
 }
+
+
+
 
 /* ==========================================
    WISH SUBMIT
 ========================================== */
 
-const wishForm = document.getElementById("wishForm");
 
-if (wishForm) {
+const wishForm =
+document.getElementById("wishForm");
 
-    wishForm.addEventListener("submit", async function (e) {
+if(wishForm){
+
+
+    wishForm.addEventListener(
+        "submit",
+        async function(e){
 
         e.preventDefault();
 
-        const submitButton = wishForm.querySelector("button");
+        const button =
+        wishForm.querySelector("button");
 
-        submitButton.disabled = true;
-        submitButton.innerText = "Sending...";
+        button.disabled = true;
+
+        button.innerText =
+        "Sending...";
 
         const data = {
 
-            action: "wish",
 
-            nama: wishForm.querySelector("input").value,
+            action:"wish",
 
-            ucapan: wishForm.querySelector("textarea").value
+            nama:
+            wishForm.querySelector(
+                "input[name='nama']"
+            ).value,
+
+            ucapan:
+            wishForm.querySelector(
+                "textarea[name='ucapan']"
+            ).value
+
 
         };
 
         try {
 
-            const response = await fetch(SCRIPT_URL, {
 
-                method: "POST",
 
-                body: JSON.stringify(data),
+            const response =
+            await fetch(
+                SCRIPT_URL,
+                {
 
-                headers: {
+                    method:"POST",
 
-                    "Content-Type": "application/json"
+                    body:
+                    new URLSearchParams(data)
 
                 }
+            );
 
-            });
+            const result =
+            await response.json();
 
-            const result = await response.json();
 
-            if (result.status === "success") {
+            if(result.status === "success"){
 
-                showNotification("Thank you for your wishes ❤️");
+
+                showNotification(
+                    "Thank you for your wishes ❤️"
+                );
+
 
                 wishForm.reset();
 
+
                 loadWishes();
-
-            } else {
-
-                alert(result.message || "Failed to send.");
 
             }
 
-        } catch (err) {
+            else {
 
-            console.error(err);
 
-            alert("Network error.");
+                alert(
+                    result.message ||
+                    "Failed to send wishes."
+                );
+
+            }
 
         }
 
-        submitButton.disabled = false;
-        submitButton.innerText = "Send Wishes";
+        catch(error){
+
+
+            console.error(
+                "Wish Error:",
+                error
+            );
+
+
+            alert(
+                "Network error."
+            );
+
+
+        }
+
+        button.disabled=false;
+
+        button.innerText =
+        "Send Wishes";
 
     });
 
 }
 
+
 /* ==========================================
    LOAD WISHES
 ========================================== */
 
-async function loadWishes() {
+async function loadWishes(){
 
-    const container = document.getElementById("wishList");
+    const container =
+    document.getElementById(
+        "wishList"
+    );
 
-    if (!container) return;
+    if(!container)
+        return;
 
     try {
 
-        const response = await fetch(
-            SCRIPT_URL + "?action=getWishes"
+        const response =
+        await fetch(
+            SCRIPT_URL +
+            "?action=getWishes"
         );
 
-        const wishes = await response.json();
+        const wishes =
+        await response.json();
 
-        container.innerHTML = "";
+        container.innerHTML="";
 
-        wishes.reverse().forEach(item => {
+        wishes
+        .reverse()
+        .forEach(item=>{
 
-            const div = document.createElement("div");
+            const div =
+            document.createElement(
+                "div"
+            );
 
-            div.className = "wish";
+            div.className =
+            "wish";
 
             div.innerHTML = `
-                <h4>${escapeHtml(item.nama)}</h4>
-                <p>${escapeHtml(item.ucapan)}</p>
+
+                <h4>
+                ${escapeHtml(item.nama)}
+                </h4>
+
+                <p>
+                ${escapeHtml(item.ucapan)}
+                </p>
+
             `;
 
             container.appendChild(div);
 
         });
 
-    } catch (err) {
+    }
 
-        console.error(err);
+    catch(error){
+
+        console.error(
+            "Load wishes error:",
+            error
+        );
 
     }
 
 }
 
+
 /* ==========================================
-   HTML ESCAPE
+   ESCAPE HTML
 ========================================== */
 
-function escapeHtml(text) {
+function escapeHtml(text){
 
-    if (!text) return "";
+    if(!text)
+        return "";
 
     return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+
+    .replace(
+        /</g,
+        "&lt;"
+    )
+
+    .replace(
+        />/g,
+        "&gt;"
+    )
+
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+
+    .replace(
+        /'/g,
+        "&#039;"
+    );
+
+
+}
+
+
+/* ==========================================
+   NOTIFICATION
+========================================== */
+
+
+function showNotification(message){
+
+
+    alert(message);
+
 
 }
 
@@ -209,8 +385,13 @@ function escapeHtml(text) {
    INITIAL LOAD
 ========================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
 
     loadWishes();
+
 
 });
