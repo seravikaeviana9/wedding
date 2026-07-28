@@ -875,19 +875,15 @@ button {
 }
 
 
-
-/* ===============================
-   LUXURY FOOTER
-================================ */
-
-
 /* ===============================
    SIMPLE LUXURY FOOTER
+================================ */
+/* ===============================
+   COMPACT LUXURY FOOTER
 ================================ */
 
 
 #footer {
-
 
     background:#8b6a3e;
 
@@ -895,8 +891,7 @@ button {
 
     text-align:center;
 
-    padding:45px 20px 35px;
-
+    padding:25px 20px 20px;
 
 }
 
@@ -904,11 +899,9 @@ button {
 
 .footer-content {
 
-
-    max-width:600px;
+    max-width:500px;
 
     margin:auto;
-
 
 }
 
@@ -916,17 +909,13 @@ button {
 
 .footer-content h3 {
 
-
     font-family:'Poppins', sans-serif;
 
-    font-size:16px;
+    font-size:14px;
 
     font-weight:600;
 
-    letter-spacing:.5px;
-
-    margin-bottom:12px;
-
+    margin-bottom:8px;
 
 }
 
@@ -934,13 +923,13 @@ button {
 
 .footer-content p {
 
-
-    font-size:14px;
+    font-size:12px;
 
     color:#f5ead8;
 
-    line-height:1.8;
+    line-height:1.5;
 
+    margin:4px 0;
 
 }
 
@@ -948,22 +937,19 @@ button {
 
 .footer-brand {
 
+    font-size:13px !important;
 
-    font-size:15px !important;
-
-    letter-spacing:2px;
+    letter-spacing:1.5px;
 
     color:white !important;
 
-    margin-top:5px;
-
+    margin-top:5px !important;
 
 }
 
 
 
 .back-top {
-
 
     display:flex;
 
@@ -972,12 +958,12 @@ button {
     align-items:center;
 
 
-    width:35px;
+    width:32px;
 
-    height:35px;
+    height:32px;
 
 
-    margin:25px auto 0;
+    margin:15px auto 0;
 
 
     border-radius:50%;
@@ -988,23 +974,9 @@ button {
     background:#e5c58b;
 
 
-    font-size:20px;
-
-    transition:.3s;
-
+    font-size:16px;
 
 }
-
-
-
-.back-top:hover {
-
-
-    transform:translateY(-5px);
-
-
-}
-
 
 /* ===============================
    MOBILE RESPONSIVE
