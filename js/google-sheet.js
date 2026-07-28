@@ -3,7 +3,7 @@
 ========================================== */
 
 // Replace with your deployed Google Apps Script Web App URL
-const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1ozo7BIwn7HlCwzqE6HA5fy-zn6EpaGMJnGbAtW1eKAc/edit?gid=0#gid=0";
 
 /* ==========================================
    RSVP SUBMIT
