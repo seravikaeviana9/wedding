@@ -3,7 +3,7 @@
 ========================================== */
 
 // Replace with your deployed Google Apps Script Web App URL
-const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1ozo7BIwn7HlCwzqE6HA5fy-zn6EpaGMJnGbAtW1eKAc/edit?gid=0#gid=0";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw38rOBxXmvJQqnNXUGgTwaDxXo8kGsuMeQ0CWSc9acpGWIwKVGV9TDB6DPvsb8hRrF6g/exec";
 
 /* ==========================================
    RSVP SUBMIT
